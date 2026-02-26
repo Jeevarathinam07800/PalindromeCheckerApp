@@ -1,4 +1,4 @@
-public class UseCase1PalindromeCheckerApp
+public class PalindromeCheckerApp
 {
     // Application constants
     static final String APP_NAME = "Palindrome Checker App";
