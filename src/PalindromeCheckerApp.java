@@ -8,17 +8,27 @@ public class PalindromeCheckerApp {
 
         // Take input
         System.out.print("Input text: ");
-        String original = scanner.nextLine();
+        String input = scanner.nextLine();
 
-        // Reverse using loop
-        String reversed = "";
+        // Convert String to char array
+        char[] characters = input.toCharArray();
 
-        for (int i = original.length() - 1; i >= 0; i--) {
-            reversed = reversed + original.charAt(i);
+        // Two pointer technique
+        int start = 0;
+        int end = characters.length - 1;
+
+        boolean isPalindrome = true;
+
+        while (start < end) {
+
+            if (characters[start] != characters[end]) {
+                isPalindrome = false;
+                break;
+            }
+
+            start++;
+            end--;
         }
-
-        // Compare original and reversed
-        boolean isPalindrome = original.equals(reversed);
 
         // Display result
         System.out.println("Is it a Palindrome? : " + isPalindrome);
@@ -26,4 +36,3 @@ public class PalindromeCheckerApp {
         scanner.close();
     }
 }
-
